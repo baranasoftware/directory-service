@@ -5,10 +5,11 @@ Feel free to reach us at contact@baranasoftware.com to see how we can collaborat
 
 ## Tech Stack
 
-* Rust - Actix for REST APIs
-* Angular
-* AWS
-* Terraform
+* ![Rust](https://www.vectorlogo.zone/logos/rust-lang/rust-lang-ar21.svg) 
+  * Actix for REST APIs
+* ![Angular](https://www.vectorlogo.zone/logos/angular/angular-ar21.svg)
+* ![AWS Lambda](https://www.vectorlogo.zone/logos/amazon_awslambda/amazon_awslambda-ar21.svg)
+* ![Terraform](https://img.shields.io/badge/-Terraform-eee?style=flat-square&logo=Terraform&logoColor=844FBA)
 
 ## Roadmap
 - [x] Document the UX design for the product
