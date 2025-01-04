@@ -5,7 +5,7 @@ Feel free to reach us at contact@baranasoftware.com to see how we can collaborat
 
 ## Tech Stack
 
-* Rust
+* Rust - Actix for REST APIs
 * Angular
 * AWS
 * Terraform
