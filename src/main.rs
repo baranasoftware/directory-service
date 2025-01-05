@@ -1,9 +1,8 @@
 mod handlers;
 mod models;
-mod routes;
 mod state;
 
-use crate::routes::{echo, health, hello};
+use crate::handlers::{echo, health, hello};
 use crate::state::AppState;
 use actix_web::{web, App, HttpServer};
 use std::io;
