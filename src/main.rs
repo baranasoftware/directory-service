@@ -1,29 +1,28 @@
-use actix_web::{get, post, web, App, HttpResponse, HttpServer, Responder};
+mod handlers;
+mod models;
+mod routes;
+mod state;
+
+use crate::routes::{echo, health, hello};
+use crate::state::AppState;
+use actix_web::{web, App, HttpServer};
 use std::io;
-
-#[get("/")]
-async fn hello() -> impl Responder {
-    HttpResponse::Ok().body("Hello from directory service!")
-}
-
-#[post("/echo")]
-async fn echo(req_body: String) -> impl Responder {
-    HttpResponse::Ok().body(req_body)
-}
-
-async fn health() -> impl Responder {
-    HttpResponse::Ok().body("The directory service is up and running!")
-}
+use std::sync::Mutex;
 
 #[actix_web::main]
 async fn main() -> io::Result<()> {
-    HttpServer::new(|| {
+    let shared_data = web::Data::new(AppState {
+        health_check_response: "app is doing good!".to_string(),
+        visit_count: Mutex::new(0),
+    });
+
+    let app = move || {
         App::new()
+            .app_data(shared_data.clone())
             .service(hello)
             .service(echo)
             .route("/health", web::get().to(health))
-    })
-        .bind("127.0.0.1:8000")?
-        .run()
-        .await
+    };
+
+    HttpServer::new(app).bind("127.0.0.1:3000")?.run().await
 }
