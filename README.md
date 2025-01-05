@@ -8,7 +8,7 @@ Feel free to reach out to us at contact@baranasoftware.com, we discuss how we ca
 * ![Rust](https://www.vectorlogo.zone/logos/rust-lang/rust-lang-ar21.svg) 
   * [Actix](https://actix.rs/) for REST APIs
 * ![Angular](https://www.vectorlogo.zone/logos/angular/angular-ar21.svg)
-* ![AWS Lambda](https://www.vectorlogo.zone/logos/amazon_awslambda/amazon_awslambda-ar21.svg)
+* ![AWS](https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg)
 * ![Terraform](https://img.shields.io/badge/-Terraform-eee?style=flat-square&logo=Terraform&logoColor=844FBA)
 
 ## Roadmap
